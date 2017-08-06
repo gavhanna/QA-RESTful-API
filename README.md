@@ -15,13 +15,13 @@ Receive a list of question in JSON via a GET request to "/questions".
 
 Ask a question with a POST request to "/questions".
 For example:
-`
+```json
 {
   "text": "Is this an example question?"
 }
-`
+```
 Will return
-`
+```json
 {
   "__v": 0,
   "text": "Is this an example question?",
@@ -29,12 +29,12 @@ Will return
   "answers": [],
   "createdAt": "2017-05-14T19:54:47.625Z"
 }
-`
+```
 
 To continue this example, a get request to
 "/questions/5918b607a428001866146411"
 will return:
-`
+```json
 {
   "_id": "5918b607a428001866146411",
   "text": "Is this an example question?",
@@ -47,14 +47,14 @@ will return:
 A POST request to
 "/questions/5918b607a428001866146411/answers/"
 which contains:
-`
+```json
 {
   "text": "Yes it is!"
 }
-`
+```
 
 Will produce:
-`
+```json
 {
   "_id": "5918b607a428001866146411",
   "text": "Is this an example question?",
@@ -70,18 +70,18 @@ Will produce:
   ],
   "createdAt": "2017-05-14T19:54:47.625Z"
 }
-`
+```
 
 A PUT request to
 "/questions/5918b607a428001866146411/answers/5918b7f1a428001866146413"
 with:
-`
+```json
 {
   "text": "Yep!"
 }
-`
+```
 Will return:
-`
+```json
 {
   "_id": "5918b607a428001866146411",
   "text": "Is this an example question?",
@@ -97,12 +97,12 @@ Will return:
   ],
   "createdAt": "2017-05-14T19:54:47.625Z"
 }
-`
+```
 
 Finally, a DELETE request to
 "/questions/5918b607a428001866146411/answers/5918b7f1a428001866146413"
 will return
-`
+```json
 {
   "_id": "5918b607a428001866146411",
   "text": "Is this an example question?",
@@ -110,4 +110,4 @@ will return
   "answers": [],
   "createdAt": "2017-05-14T19:54:47.625Z"
 }
-`
+```
